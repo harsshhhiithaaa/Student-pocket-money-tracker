@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Pocket Money Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Student Pocket Money Tracker</h1>
+    </header>
+
+    <section>
+        <!-- Input form for pocket money and plan -->
+        <form id="pocket-money-form">
+            <label for="pocket-money">Enter Pocket Money:</label>
+            <input type="number" id="pocket-money" required placeholder="e.g., 500">
+
+            <label for="spending">Planned Spending Amount:</label>
+            <input type="number" id="spending" required placeholder="e.g., 300">
+
+            <label for="saving">Planned Saving Amount:</label>
+            <input type="number" id="saving" required placeholder="e.g., 200">
+            <label for="saving-description">What are you saving for?</label>
+            <input type="text" id="saving-description" required placeholder="e.g., shoes">
+
+            <button type="submit">Set Plan</button>
+        </form>
+
+        <!-- Input form for daily expenses -->
+        <form id="expense-form">
+            <label for="expense-description">Expense Description:</label>
+            <input type="text" id="expense-description" required placeholder="e.g., Lunch">
+
+            <label for="expense-amount">Expense Amount:</label>
+            <input type="number" id="expense-amount" required placeholder="e.g., 50">
+
+            <button type="submit">Add Expense</button>
+            <!-- <button onclick="saveAndNavigate()">Add to report</button> -->
+            <!-- <button id="generate-report">Generate Report</button>
+            <div id="expense-report"></div> -->
+        </form>
+    </section>
+
+    <section id="summary">
+        <!-- Display pocket money, expenses, and balance -->
+        <div class"edit" id="planned-spending">Planned Spending: $<span id="spending-total">0</span></div>
+        <div class"edit" id="expenses">Total Expenses: $<span id="expenses-total">0</span></div>
+        <div class"edit" id="remaining-spending">Remaining Spending: $<span id="remaining-total">0</span></div>
+        <div class"edit" id="planned-saving">Planned Saving: $<span id="saving-total">0</span></div>
+    </section>
+    <div class="main">
+        <!-- <div class="graph"> -->
+            <canvas id="expense-chart" height="100px"></canvas>
+        <!-- </div> -->
+
+        <!-- <div class="math">
+            <h1><b>Expense report</b></h1>
+            <hr>
+            <div class="report" id="outputDiv">
+            </div>
+            <div>
+            </div>
+        </div> -->
+    </div>
+    
+    <button id="reset-plan">Reset Plan</button>
+    <!-- Chart.js Visualization -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>
